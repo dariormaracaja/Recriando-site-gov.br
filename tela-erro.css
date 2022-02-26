@@ -1,0 +1,31 @@
+header{
+	background: #ffffff;
+	padding-top: 16px;
+	padding-bottom: 0;
+	padding: 16px 0 40px 0;
+	padding-left: 184px;
+	padding-right: 184px;
+	box-shadow: 0px 3px 6px rgba(0, 0, 0, 0.16);	
+	
+}
+
+
+nav{
+	position: absolute;
+	top: 16px;
+	right: 184px;
+}
+
+nav li{
+
+	display: inline-block;
+	margin: 0 0 0 16px ; 	/* 0 0 0 0 = topo, direita, baixo, esquerda */
+}
+
+nav a{
+	color: #1351b4;
+	font-family: "rawline",helvetica,arial,sans-serif;
+	font-size: 14px;
+	font-weight: 500;
+	text-decoration: none;
+}

@@ -1,4 +1,12 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+
 header{
+	box-sizing: border-box;
 	background: #ffffff;
 	padding-top: 16px;
 	padding-bottom: 0;
@@ -17,9 +25,14 @@ nav{
 }
 
 nav li{
-
+	/*font-size: 16px;*/
 	display: inline-block;
-	margin: 0 0 0 16px ; 	/* 0 0 0 0 = topo, direita, baixo, esquerda */
+    margin: 0 8px;
+    font-family: "rawline",helvetica,arial,sans-serif;
+    font-weight: 400;
+    font-size: 1.6rem;
+    color: #555;
+    line-height: 1.5;
 }
 
 nav a{
@@ -29,3 +42,31 @@ nav a{
 	font-weight: 500;
 	text-decoration: none;
 }
+
+
+main{
+	background: #002941;
+	height: 100px;
+	box-shadow: 0px 10px 10px rgba(0, 0, 0, 0.18);	
+	padding-left: 184px;
+	padding-right: 184px;
+}
+
+main img{
+	position: fixed;	
+	width: 100px;
+	height: 65px;
+	margin-top: 17px;
+	margin-left: 381px;	
+	}
+
+div p{
+	position: fixed;	
+	text-transform: uppercase;
+	font-weight: 00;
+	color: #ffffff;	
+	font-size: 1.6rem;
+	margin-left: 521px;
+	margin-top: 41px;
+}
+

@@ -1,0 +1,379 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    word-wrap: break-word;
+}
+:root{
+    --color0: #f0f8ff;
+    --color1: #ffc759;
+    --color2: #8491a3;
+    --color3: #283845;
+    --color4: #ffd98e;
+
+}
+.flex{
+    display: flex;
+}
+.container{
+    width: 80%;
+    max-width: 1240px;
+}
+body{
+    font-family: 'Gideon Roman', cursive;
+    background-color: var(--color0);
+}
+header{
+    justify-content: center;
+    width: 100%;
+    min-height: 380px;
+    color: var(--color0);
+    background-color: var(--color3);
+    z-index: 2;
+    /* background-image: url(images/turing-page/Alan-Turing-Picture300.png);
+    background-repeat: no-repeat;
+    background-position: 50vw; */
+}
+header .container{
+    background-image: url(images/turing-page/Alan-Turing-Picture300.png);
+    background-repeat: no-repeat;
+    background-position: right;
+    flex-direction: column;
+    justify-content: center;
+    padding: 20px 0;
+}
+#menu-mobile{
+    display: none;
+    width: 30px;
+    height: 25px;
+    flex-direction: column;
+    justify-content: space-between;
+    margin: 5px 0;
+    padding: 2px 0;
+}
+#menu-mobile .mobile-line{
+    height: 3px;
+    background-color: var(--color1);
+    border-radius: 5px;
+}
+#menu{
+    justify-content: center;
+    position: sticky;
+    top: 0;
+    background-color: var(--color3);
+    text-transform: uppercase;
+    box-shadow: 0 1px 1px var(--color2);
+    z-index: 1;
+}
+#menu ul{
+    list-style: none;
+    flex: 1;
+}
+#menu li{
+    flex: 1;
+    border-right: 1px solid var(--color1);
+    text-align: center;
+}
+#menu li:nth-child(1){
+    border-left: 1px solid var(--color1);
+}
+#menu li a{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    line-height: 11px;
+    font-size: 14px;
+    width: 100%;
+    text-decoration: none;
+    color: var(--color0);
+    padding: 10px;
+}
+#menu a:hover{
+    background-color: var(--color1);
+    color: var(--color3);
+}
+header h2,
+header h3{
+    color: var(--color2);
+}
+header .container h1,
+header .container h2,
+header .container h3{
+    font-weight: normal;
+    letter-spacing: 8px;
+}
+.small-bar::after{
+    content: "";
+    display: block;
+    margin: 25px 0;
+    width: 45px;
+    height: 2px;
+    background-color: var(--color1);
+}
+main .small-bar::after{
+    background-color: var(--color1);
+    margin-top: 5px;
+}
+#curiosities .small-bar::after{
+    background-color: var(--color3);
+}
+#curiosities .left-side .small-bar::after{
+    position: relative;
+    left:calc(100% - 45px);
+}
+
+main{
+    flex-direction: column;
+    /* align-items: center; */
+    color: var(--color3);
+}
+main .container{
+    flex-direction: column;
+}
+main .bg-about,
+main .bg-curiosities{
+    width: 100%;
+    justify-content: center;
+}
+.bg-about{
+    background-color: var(--color0);
+    box-shadow: 0 5px 5px var(--color0);
+}
+.bg-curiosities{
+    background-color: var(--color4);
+}
+main section{
+    margin: 15px 0;
+}
+#turingName{
+    font-size: 24px;
+}
+main p{
+    text-align: justify;
+}
+#about h2{
+    margin-top: 25px;
+}
+
+#curiosities{
+    margin-top: 30px;
+}
+#curiosities>h2,
+#curiosities>h3{
+    text-align: center;
+}
+#curiosities .curiosity-line{
+    margin-top: 20px;
+}
+/* DESCARTADO POIS NÃO CONSEGUI FAZER A ALTURA DA LINHA SER RELATIVA A ALTURA DA DIV PAI */
+/* #curiosities .curiosity-line::before{
+    content: "";
+    position: absolute;
+    left: calc(50% - 2.5px);
+    width: 5px;
+    height: 100%;
+    min-height: 3567px;
+    background-color: var(--color3);
+} */
+#curiosities .left-side,
+#curiosities .right-side{
+    position: relative;
+    padding: 20px;
+    width: 50%;
+}
+#curiosities .left-side{
+    padding-left: 0;
+    left:0;
+    text-align: right;
+    border-right: 3px solid var(--color3);
+}
+
+#curiosities .right-side{
+    padding-right: 0;
+    left: calc(50% - 3px);
+    border-left: 3px solid var(--color3);
+}
+
+#curiosities .left-side::after,
+#curiosities .right-side::after{
+    content: "";
+    position: absolute;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: var(--color3);
+}
+#curiosities .left-side::after{
+    right: -11.5px;
+}
+#curiosities .right-side::after{
+    left: -11.5px;
+}
+
+.source{
+    margin-top: 20px;
+    font-size: 18px;
+}
+.source a{
+    text-decoration: none;
+    color: inherit;
+}
+.source a:hover{
+    text-decoration: underline;
+}
+footer{
+    min-height: 70px;
+    padding: 15px 5px;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--color3);
+}
+footer .container{
+    color: var(--color0);
+    text-align: center;
+    font-size: 13px;
+}
+footer .source{
+    margin-top: 0;
+}
+/* ----------- MEDIA ----------- */
+
+@media (max-width:825px){
+    header .container{
+        background-image: none;
+    }
+    header .container::before{
+        content: "";
+        position: absolute;
+        opacity: 0.3;
+        width: 80%;
+        height: 380px;
+        background-image: url(images/turing-page/Alan-Turing-Picture300.png);
+        background-repeat: no-repeat;
+        background-position: right;
+        background-size: contain;
+    }
+    header h1,
+    header h2,
+    header h3{
+        color: #fff;
+        /* z-index: 1; */
+    }
+}
+
+@media (min-width: 555px) and (max-width: 690px){
+    #menu .container{
+        width: 100%;
+    }
+}
+@media(max-width: 554px){
+    .container{
+        width: 96%;
+    }
+    #menu-mobile{
+        display: flex;
+    }
+    #menu ul{
+        display: none;
+        flex-direction: column;
+        align-items: center;
+    }
+    #menu li{
+        width: 95%;
+        border-left: 1px solid var(--color1);
+    }
+}
+@media(max-width: 425px){
+    #about #img03,
+    #about #img04,
+    #about #img05{
+        float: none;
+        padding: 5px;
+    }
+}
+@media(max-width: 375px){
+    #about #img02{
+        float: none;
+        padding: 5px;
+    }
+}
+@media(max-width: 319px){
+    #about #img01,
+    #about #img02,
+    #about #img03,
+    #about #img04,
+    #about #img05{
+        padding: 5px;
+    }
+    #about #img01{
+        float:none;
+    }
+    .images img{
+        width: 90%;
+    }
+}
+/* ----------- IMAGES ----------- */
+
+.images{
+    position: relative;
+    flex-direction: column;
+    align-items: center;
+}
+.images figcaption{
+    text-align: center;
+    color: var(--color2);
+    font-size: 12px;
+    font-style: italic;
+}
+.images figcaption a{
+    text-decoration: none;
+    color: inherit;
+}
+.images figcaption a:hover{
+    text-decoration: underline;
+}
+
+#img01{
+    float: right;
+}
+#img01 img,
+#img01 figcaption{
+    max-width: 160px;
+}
+
+
+#img02{
+    float: left;
+    padding: 0 15px 10px 0;
+}
+#img02 img,
+#img02 figcaption{
+    max-width: 220px;
+}
+
+#img03{
+    float: right;
+    padding: 0 0 10px 15px;
+}
+#img03 img,
+#img03 figcaption{
+    max-width: 300px;
+}
+
+#img04{
+    float: left;
+    padding: 0 15px 10px 0;
+}
+#img04 img,
+#img04 figcaption{
+    max-width: 300px;
+}
+#img05{
+    float: right;
+    padding: 0 0 10px 15px;
+}
+#img05 img,
+#img05 figcaption{
+    max-width: 300px;
+}
